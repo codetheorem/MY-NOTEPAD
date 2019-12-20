@@ -19,3 +19,4 @@ cx_Freeze.setup(
     description = "Tkinter Application",
     executables = executables
     )
+    

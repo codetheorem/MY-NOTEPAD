@@ -138,6 +138,11 @@ align_right_icon = tk.PhotoImage(file='icons2/align_right.png')
 align_right_btn=ttk.Button(tool_bar,image=align_right_icon)
 align_right_btn.grid(row=0,column=8,padx=5)
 
+##undo button
+undo_icon= tk.PhotoImage(file='icons2/undo.png')
+undo_btn=ttk.Button(tool_bar,image=undo_icon)
+undo_btn.grid(row=0,column=9,padx=5)
+
 
 #----------&&&&& End toolbar &&&&&----------#
 
@@ -258,6 +263,22 @@ def align_right():
     text_editor.insert(tk.INSERT,text_content,'right')
 
 align_right_btn.configure(command=align_right)
+
+
+##undo
+
+def undo():
+    text_editor.edit_undo()
+    
+undo_btn.configure(command=undo)    
+
+
+    
+
+
+
+
+
 
 
 
